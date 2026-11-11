@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Letícia Gazinhato · Portfólio</title>
+<meta name="description" content="Portfólio de Letícia Gazinhato, professora de redação, revisora e autora de conteúdo educacional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: uma coluna de leitura com margem lateral para "anotações de revisão" em telas largas */
+  --paper:#EEF1F4;
+  --sheet:#FFFFFF;
+  --ink:#14213D;
+  --ink-soft:#4A5672;
+  --rule:#C9D1DC;
+  --pencil:#D1342F;
+  --display:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --body:"Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--pencil)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* Topo */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px 0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--ink-soft)}
+.top nav{display:flex;gap:20px;flex-wrap:wrap}
+.top nav a{text-decoration:none;color:var(--ink-soft)}
+.top nav a:hover{color:var(--pencil)}
+
+/* Hero */
+.hero{padding:56px 0 64px;border-bottom:1px solid var(--rule)}
+.hero .kicker{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 28px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,8vw,96px);line-height:1.38;letter-spacing:-.01em;margin:0;text-wrap:balance;max-width:14ch}
+.fix{position:relative;display:inline-block;white-space:nowrap}
+.fix del{text-decoration:none;position:relative;color:var(--ink-soft)}
+.fix del::after{content:"";position:absolute;left:-4%;right:-4%;top:54%;height:4px;background:var(--pencil);transform:rotate(-4deg);border-radius:2px}
+.fix ins{position:absolute;left:4%;top:-.42em;font-family:var(--display);font-style:italic;text-decoration:none;color:var(--pencil);font-size:.62em;transform:rotate(-3deg);white-space:nowrap}
+.hero .lede{max-width:58ch;font-size:21px;color:var(--ink-soft);margin:36px 0 0}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1.5px solid var(--ink);background:var(--ink);color:var(--sheet);font-weight:600;font-size:16px;text-decoration:none;border-radius:2px}
+.btn:hover{background:var(--pencil);border-color:var(--pencil);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{color:#fff}
+
+/* Fatos */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-bottom:1px solid var(--rule)}
+.facts div{padding:28px 24px 28px 0}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:40px;line-height:1.1}
+.facts span{font-size:15px;color:var(--ink-soft)}
+
+/* Seções */
+section{padding:72px 0;border-bottom:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:baseline;margin-bottom:36px}
+.sec-head .mark{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--pencil)}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,5vw,52px);line-height:1.1;margin:0;text-wrap:balance}
+.sec-head p{grid-column:2;margin:12px 0 0;color:var(--ink-soft);max-width:60ch}
+.body{margin-left:204px}
+
+/* Cartões de trabalho */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--sheet);border:1px solid var(--rule);padding:26px 26px 22px;display:flex;flex-direction:column;gap:10px}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.tag.spec{color:var(--pencil)}
+.card h3{font-family:var(--display);font-weight:400;font-size:28px;line-height:1.15;margin:0}
+.card p{margin:0;font-size:16px;color:var(--ink-soft)}
+.todo{border:1.5px dashed var(--pencil);background:transparent}
+.todo .tag{color:var(--pencil)}
+
+/* Peça longa */
+.piece{background:var(--sheet);border:1px solid var(--rule);padding:36px;margin-top:20px}
+.piece + .piece{margin-top:24px}
+.piece .meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.piece h3{font-family:var(--display);font-weight:400;font-size:32px;line-height:1.15;margin:0 0 6px}
+.piece .brief{font-size:16px;color:var(--ink-soft);margin:0 0 24px;max-width:62ch}
+.copy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.copy{border-left:3px solid var(--ink);padding:4px 0 4px 16px}
+.copy small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.copy .big{font-family:var(--display);font-size:28px;line-height:1.15}
+.copy p{margin:0;font-size:16px}
+
+/* Antes e depois */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba > div{padding:18px 20px;font-size:16px}
+.ba .before{background:#F6F7F9;color:var(--ink-soft)}
+.ba .after{border:1.5px solid var(--ink)}
+.ba small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+.ba .before small{color:var(--ink-soft)}
+.ba .after small{color:var(--pencil)}
+.ba s{text-decoration-color:var(--pencil);text-decoration-thickness:2px}
+.why{margin:14px 0 0;font-size:15px;color:var(--ink-soft)}
+
+/* Questão */
+.q{font-size:17px}
+.q .src{font-size:15px;border-left:3px solid var(--rule);padding-left:16px;color:var(--ink-soft);margin:0 0 16px;font-style:italic}
+.q ol{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:6px}
+.q li{display:grid;grid-template-columns:28px 1fr;gap:6px}
+.q li b{font-family:var(--mono);font-weight:500}
+.q li.ok b{color:var(--pencil)}
+details{margin-top:16px;font-size:15px;color:var(--ink-soft)}
+summary{cursor:pointer;font-weight:600;color:var(--ink)}
+
+/* Sobre / contato */
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.two p{margin:0 0 16px;max-width:60ch}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.list li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.list li span:last-child{font-family:var(--mono);font-size:13px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.contact{font-family:var(--display);font-size:clamp(32px,5vw,56px);line-height:1.15;margin:0 0 20px;text-wrap:balance}
+.contact-lines{display:grid;gap:8px;font-size:18px}
+.contact-lines span{font-family:var(--mono);font-size:13px;color:var(--ink-soft);display:inline-block;width:90px}
+footer{padding:28px 0 48px;font-family:var(--mono);font-size:12px;color:var(--ink-soft)}
+
+@media (max-width:820px){
+  .sec-head{grid-template-columns:1fr;gap:8px}
+  .sec-head p{grid-column:1}
+  .body{margin-left:0}
+  .two{grid-template-columns:1fr;gap:32px}
+  .ba{grid-template-columns:1fr}
+  .piece{padding:24px}
+}
+@media (max-width:480px){body{font-size:17px}.hero{padding:36px 0 44px}}
+</style>
+<style>
+/* Acréscimos v2 */
+.hero h1{max-width:16ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;align-items:center}
+.chips .label{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin-right:4px}
+.chip{font-family:var(--mono);font-size:13px;padding:4px 10px;border:1px solid var(--rule);background:var(--sheet);border-radius:2px}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.area{background:var(--sheet);border:1px solid var(--rule);padding:24px;display:flex;flex-direction:column;gap:8px}
+.area .num{font-family:var(--mono);font-size:12px;color:var(--pencil);letter-spacing:.05em}
+.area h3{font-family:var(--display);font-weight:400;font-size:27px;line-height:1.15;margin:0}
+.area p{margin:0;font-size:16px;color:var(--ink-soft)}
+.area.secret{border-style:dashed;border-color:var(--ink-soft);background:transparent}
+.lock{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.04em;text-transform:uppercase}
+
+/* Devolutiva anotada */
+.annot{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:start}
+.essay{font-family:var(--display);font-size:22px;line-height:1.6;background:repeating-linear-gradient(to bottom,transparent 0,transparent 34px,#E3E8EF 34px,#E3E8EF 35px);padding:4px 0}
+.essay mark{background:transparent;color:inherit;text-decoration:underline wavy var(--pencil);text-decoration-thickness:1.5px;text-underline-offset:5px}
+.essay sup,.notes b{font-family:var(--mono);font-size:12px;color:#fff;background:var(--pencil);border-radius:50%;display:inline-grid;place-items:center;width:20px;height:20px;font-weight:500;vertical-align:super;margin-left:2px}
+.notes{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.notes li{display:grid;grid-template-columns:28px 1fr;gap:8px;font-size:15.5px}
+.notes b{vertical-align:baseline;margin:2px 0 0}
+.notes em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--pencil);display:block;letter-spacing:.04em}
+
+/* Projeto */
+.case{background:var(--sheet);border:1px solid var(--rule);padding:36px}
+.case h3{font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,42px);line-height:1.1;margin:6px 0 10px;text-wrap:balance}
+.case .sub{color:var(--ink-soft);margin:0 0 28px;max-width:62ch}
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:32px}
+.trio div{border-top:2px solid var(--ink);padding-top:12px;font-size:16px}
+.trio small,.case h4{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--pencil);margin:0 0 6px;font-weight:500}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:8px 0 32px;counter-reset:m}
+.flow div{position:relative;padding:18px 22px 18px 18px;border:1px solid var(--rule);margin-right:-1px;font-size:15px;background:var(--paper)}
+.flow div::after{content:"";position:absolute;right:-9px;top:50%;width:16px;height:16px;background:var(--paper);border-top:1px solid var(--rule);border-right:1px solid var(--rule);transform:translateY(-50%) rotate(45deg);z-index:1}
+.flow div:last-child::after{display:none}
+.flow strong{display:block;font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;margin-bottom:4px}
+.flow span{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.05em}
+.rubric-wrap{overflow-x:auto;margin-bottom:28px}
+table.rubric{border-collapse:collapse;width:100%;font-size:15.5px;min-width:520px}
+.rubric th,.rubric td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+.rubric th{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+.rubric td:first-child{font-weight:600;white-space:nowrap}
+.rubric td:last-child{color:var(--ink-soft);font-style:italic}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.checks li{display:grid;grid-template-columns:24px 1fr;gap:8px}
+.checks li::before{content:"";width:16px;height:16px;border:1.5px solid var(--ink);margin-top:4px}
+.checks li.done::before{background:var(--ink);box-shadow:inset 0 0 0 3px var(--sheet)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media (max-width:820px){
+  .annot,.two-col{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow div::after{display:none}
+  .case{padding:24px}
+}
+@media (max-width:480px){.flow{grid-template-columns:1fr}}
+.todo-link{color:var(--pencil);font-weight:600}
+.seo-h{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--pencil);margin:28px 0 0;font-weight:500}
+.topics{margin-top:10px}
+.flow.seo{margin:0 0 20px}
+</style>
+<style>
+/* v4: blocos */
+.toc{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--rule)}
+.toc a{display:flex;flex-direction:column;gap:6px;padding:24px 18px 26px 0;text-decoration:none;color:var(--ink);border-right:1px solid var(--rule);padding-left:18px}
+.toc a:first-child{padding-left:0}
+.toc a:last-child{border-right:0}
+.toc span{font-family:var(--mono);font-size:12px;color:var(--pencil);letter-spacing:.05em}
+.toc strong{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.15}
+.toc em{font-style:normal;font-size:14px;color:var(--ink-soft);line-height:1.45}
+.toc a:hover strong{color:var(--pencil)}
+.scope{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;margin-bottom:8px}
+.scope p{margin:0 0 14px;max-width:58ch}
+.hl{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.hl li{padding:10px 0;border-bottom:1px solid var(--rule);font-size:16px;display:grid;grid-template-columns:1fr auto;gap:12px}
+.hl li small{font-family:var(--mono);font-size:12px;color:var(--ink-soft);white-space:nowrap;align-self:center}
+.secret-box{border:1.5px dashed var(--ink-soft);padding:16px 18px;margin-top:16px;font-size:15.5px}
+.secret-box b{display:block;font-family:var(--display);font-weight:400;font-size:22px;margin-bottom:4px}
+.secret-box span{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft)}
+.label-row{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:36px 0 0;display:flex;align-items:center;gap:12px}
+.label-row::after{content:"";flex:1;height:1px;background:var(--rule)}
+.chips.inblock{margin:16px 0 0}
+.scan{margin:0 0 28px}
+.annot2{display:grid;gap:22px;margin-bottom:8px}
+.annot2 .scan{margin:0}
+.scan-wrap{position:relative}
+.pin{position:absolute;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;border:2px solid #fff;background:var(--ink);color:#fff;font:600 14px/1 var(--mono);display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.35);padding:0;z-index:2;transition:transform .15s ease,background .15s ease}
+.pin:hover,.pin.on{background:var(--pencil);transform:translate(-50%,-50%) scale(1.15)}
+.pin:focus-visible{outline:3px solid var(--marca);outline-offset:2px}
+.pop{position:absolute;z-index:3;width:min(340px,80%);background:#fff;border:1.5px solid var(--pencil);border-radius:6px;box-shadow:0 8px 24px rgba(20,33,61,.25);padding:14px 36px 14px 16px;font-size:15px;line-height:1.55;display:none}
+.pop.show{display:block}
+.pop small{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--pencil);margin-bottom:4px}
+.pop p{margin:0}
+.pop button{position:absolute;top:6px;right:6px;width:28px;height:28px;border:0;border-radius:50%;background:transparent;font:600 16px/1 var(--body);color:var(--ink-soft);cursor:pointer}
+.pop button:hover{background:var(--paper);color:var(--ink)}
+.comments{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.comments li{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:10px 12px;border:1px solid var(--rule);background:#fff;border-radius:4px}
+.comments li b{width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font:600 12px/1 var(--mono);display:grid;place-items:center;margin-top:2px}
+.comments li small{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px}
+.comments li p{margin:0;font-size:15px;line-height:1.55}
+.comments li.on{border-color:var(--pencil);background:#FFF7F6}
+.comments li.on b{background:var(--pencil)}
+@media (max-width:820px){.comments{grid-template-columns:1fr}.pin{width:24px;height:24px;font-size:12px}}
+mark.norm{background:rgba(255,217,90,.6);color:inherit;padding:0 2px}
+.q-lead{margin:0 0 12px}
+.q-texts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 20px}
+.q-texts div{background:#FBFBF8;border:1px solid var(--rule);padding:16px 18px}
+.q-texts small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--pencil);margin-bottom:6px}
+.q-texts p{margin:0;font-size:16px;line-height:1.65}
+.q .q-cmd{list-style:none;padding:0;margin:14px 0 22px;display:grid;gap:8px}
+.q .q-cmd li{display:grid;grid-template-columns:28px 1fr;gap:6px}
+.q .q-cmd b{font-family:var(--mono);font-weight:500;color:var(--pencil)}
+.q-card{border-top:2px solid var(--ink);padding-top:16px}
+.q-card dl{display:flex;flex-wrap:wrap;gap:10px 28px;margin:0 0 12px}
+.q-card dl div{display:flex;gap:8px;align-items:baseline}
+.q-card dt{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.q-card dd{margin:0;font-weight:600}
+.q-card p{margin:0;font-size:16px;color:var(--ink-soft);line-height:1.65}
+.q-card strong{color:var(--ink)}
+@media (max-width:820px){.q-texts{grid-template-columns:1fr}}
+.legend{background:var(--paper);border:1px solid var(--rule);padding:16px 20px;margin:0 0 18px}
+.legend-t{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px}
+.legend ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 24px}
+.legend li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:15px;line-height:1.45;align-items:start}
+.legend i{width:16px;height:16px;border-radius:50%;margin-top:3px}
+.zoom-btn{display:block;width:100%;padding:0;border:1px solid var(--rule);background:#fff;cursor:zoom-in}
+.zoom-btn:focus-visible{outline:2px solid var(--pencil);outline-offset:3px}
+.lightbox{position:fixed;inset:0;z-index:70;background:rgba(20,33,61,.88);display:none;overflow:auto;padding:56px 16px 24px}
+.lightbox.show{display:block}
+.lightbox img{display:block;max-width:min(1400px,100%);height:auto;margin:0 auto;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.lb-close{position:fixed;top:12px;right:16px;z-index:71;font:600 16px/1 var(--body);padding:12px 18px;border-radius:999px;border:0;background:#fff;color:var(--ink);cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.lb-close:focus-visible{outline:3px solid var(--marca);outline-offset:2px}
+.scan img{display:block;width:100%;height:auto}
+.scan figcaption{font-size:14px;color:var(--ink-soft);margin-top:8px}
+.sub-h{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--pencil);margin:0 0 14px;font-weight:500}
+.rewrite{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:start}
+.rw-text{margin:0;font-size:17px;line-height:1.75;border-left:4px solid #1F5FA8;background:#FBFBF8;padding:18px 22px}
+.rw-text b,.rw-notes b{color:#1F5FA8;font-weight:700}
+.rw-notes{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:15.5px}
+.rw-notes strong{color:#1F5FA8}
+.opt{background:linear-gradient(transparent 8%,rgba(255,217,90,.55) 8%,rgba(255,217,90,.55) 92%,transparent 92%)}
+li.opt{background:rgba(255,217,90,.45);padding:2px 6px;margin:0 -6px}
+.opt-key{background:rgba(255,217,90,.55);padding:0 4px;color:var(--ink)}
+@media (max-width:820px){.rewrite{grid-template-columns:1fr}}
+#contato{--band:var(--ink);background:var(--band);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax);color:#F2F4F8}
+#contato .sec-head .mark{color:var(--marca)}
+#contato h2{color:#fff}
+#contato p{color:#E4E8F0}
+#contato .contact-lines span{color:#AEB8CC}
+#contato a{color:#fff;text-decoration-color:var(--marca)}
+#contato a:hover{color:var(--marca)}
+#contato a:focus-visible{outline-color:var(--marca)}
+.contact-lines div{display:grid;grid-template-columns:90px 1fr;gap:0 8px;align-items:baseline}
+.contact-lines span{width:auto!important}
+footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset(0 -100vmax);color:#AEB8CC;border-top:1px solid rgba(255,255,255,.12)}
+
+.side{display:grid;gap:28px;align-content:start}
+.me{display:block;width:180px;height:180px;object-fit:cover;border-radius:50%;margin:0 0 24px;border:4px solid #fff;box-shadow:0 2px 10px rgba(20,33,61,.15)}
+.pet{margin:0;background:#fff;padding:12px 12px 16px;box-shadow:0 2px 10px rgba(20,33,61,.12);transform:rotate(1.5deg);max-width:420px}
+.pet img{display:block;width:100%;height:auto}
+.pet figcaption{font-family:var(--display);font-style:italic;font-size:20px;line-height:1.3;margin-top:12px;color:var(--ink)}
+.pet figcaption span{display:block;font-family:var(--body);font-style:normal;font-size:14px;color:var(--ink-soft);margin-top:4px}
+@media (prefers-reduced-motion:no-preference){.pet{transition:transform .2s ease}.pet:hover{transform:rotate(0deg)}}
+.pull{font-family:var(--display);font-size:30px;line-height:1.2;color:var(--ink);border-left:3px solid var(--pencil);padding-left:16px;margin:26px 0 18px!important;text-wrap:balance}
+
+/* v12: cor */
+:root{--t-ensino:#E4ECF8;--t-materiais:#FBEDE1;--t-revisao:#E3F1E8;--t-seo:#FFF3CC;--t-design:#ECE7F7;--marca:#FFD95A}
+#ensino,#materiais,#revisao,#seo,#design{border-bottom:0;box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax);background:var(--band)}
+#ensino{--band:var(--t-ensino)} #materiais{--band:var(--t-materiais)} #revisao{--band:var(--t-revisao)} #seo{--band:var(--t-seo)} #design{--band:var(--t-design)}
+.hl{border-top-color:rgba(20,33,61,.18)} .hl li{border-bottom-color:rgba(20,33,61,.18)}
+.label-row::after{background:rgba(20,33,61,.18)}
+.toc{gap:12px;border-bottom:0;padding:28px 0}
+.toc a,.toc a:first-child{border:0;border-radius:4px;padding:18px 18px 20px}
+.toc a:nth-child(1){background:var(--t-ensino)} .toc a:nth-child(2){background:var(--t-materiais)} .toc a:nth-child(3){background:var(--t-revisao)} .toc a:nth-child(4){background:var(--t-seo)} .toc a:nth-child(5){background:var(--t-design)}
+.toc a{transition:transform .15s ease} .toc a:hover{transform:translateY(-2px)}
+.hilite{background:linear-gradient(transparent 58%,var(--marca) 58%,var(--marca) 92%,transparent 92%);padding:0 .05em}
+.chip{border-color:rgba(20,33,61,.2)}
+#ensino .chip{background:#fff}
+.piece,.case{border-color:rgba(20,33,61,.12);box-shadow:0 1px 2px rgba(20,33,61,.05)}
+@media (max-width:900px){.toc a{border-bottom:0}}
+@media (max-width:900px){.toc{grid-template-columns:1fr 1fr}.toc a{border-right:0;padding-left:0;border-bottom:1px solid var(--rule)}.scope{grid-template-columns:1fr}}
+@media (max-width:480px){.toc{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span>LETÍCIA GAZINHATO · SÃO BERNARDO DO CAMPO, SP</span>
+  <nav aria-label="Seções">
+    <a href="#ensino">Ensino</a>
+    <a href="#materiais">Materiais</a>
+    <a href="#revisao">Revisão</a>
+    <a href="#seo">SEO</a>
+    <a href="#design">Design instrucional</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <p class="kicker">Professora de redação · Revisora · Autora de conteúdo educacional</p>
+  <h1>Há <span class="hilite">mais de 10 anos</span> ajudo pessoas a escrever <span class="fix"><del>difícil</del><ins>com clareza</ins></span>.</h1>
+  <p class="lede">Ensino a escrever, corrijo e reviso textos, elaboro materiais didáticos e avaliativos e escrevo para a web. Agora levo essa experiência para o design instrucional.</p>
+  <div class="cta">
+    <a class="btn" href="#ensino">Ver trabalhos</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/leticiagazinhato">LinkedIn</a>
+  </div>
+</div>
+
+<nav class="toc" aria-label="Áreas de atuação">
+  <a href="#ensino"><span>01</span><strong>Ensino do texto</strong><em>Mais de 10 anos de ensino e correção de textos, do EF aos vestibulares</em></a>
+  <a href="#materiais"><span>02</span><strong>Materiais e avaliação</strong><em>Materiais didáticos e avaliativos para escolas e editora</em></a>
+  <a href="#revisao"><span>03</span><strong>Revisão e edição</strong><em>TCCs, artigos científicos e conteúdo editorial</em></a>
+  <a href="#seo"><span>04</span><strong>Redação SEO</strong><em>Artigos de produto da pesquisa ao texto final</em></a>
+  <a href="#design"><span>05</span><strong>Design instrucional</strong><em>Especialização no Senac e primeiro projeto autoral</em></a>
+</nav>
+
+<section id="ensino">
+  <div class="sec-head">
+    <span class="mark">01 · Ensino do texto</span>
+    <h2>Uma década no ensino da escrita</h2>
+  </div>
+  <div class="body">
+    <div class="scope">
+      <div>
+        <p>Há pouco mais de 10 anos, iniciei minha jornada na área da educação como monitora de Língua Portuguesa, cargo que me apresentou à sala de aula e ao ensino do texto. Na Escola Móbile, como professora assistente de Produção de Texto, passei a ensinar a escrita e a trabalhar a fundo com o texto: corrigi produções de alunos dos Anos Finais do Ensino Fundamental ao 3º ano do Ensino Médio, em gêneros que vão da narrativa à dissertação argumentativa e demais cobrados nos vestibulares.</p>
+        <p>Também me aperfeiçoei na preparação para vestibulares, com oficinas voltadas aos principais exames e atendimento individual de escrita, para acompanhar de perto a evolução de cada aluno.</p>
+        <div class="chips inblock" aria-label="Vestibulares trabalhados em aula">
+          <span class="chip">Enem</span><span class="chip">Fuvest</span><span class="chip">Unicamp</span><span class="chip">Insper</span><span class="chip">FGV</span><span class="chip">Medicina · Vunesp</span>
+        </div>
+      </div>
+      <ul class="hl">
+        <li>Professora Assistente de Produção de Texto · Escola Móbile<small>2020 – 2026</small></li>
+        <li>Professora Assistente de Língua Portuguesa · Escola Móbile<small>2018 – 2019</small></li>
+        <li>Monitora de Língua Portuguesa · Escola Villare<small>2016 – 2018</small></li>
+        <li>Monitora de Língua Portuguesa · Pueri Domus<small>2016</small></li>
+      </ul>
+    </div>
+
+    <p class="label-row">Amostras</p>
+    <article class="piece">
+      <div class="meta"><span class="tag">Correção real · proposta Einstein 2023</span><span class="tag">Redação dissertativa · vestibular de Medicina</span></div>
+      <h3>Uma redação corrigida, linha por linha</h3>
+      <p class="brief">Redação de um aluno escrita a partir da proposta do vestibular de Medicina do Albert Einstein de 2023, sobre o combate ao uso de cigarros eletrônicos no Brasil, com as minhas marcações de correção. Em seguida, uma sugestão de reescrita da conclusão, que mostra ao aluno como fechar o texto.</p>
+      <div class="legend" aria-label="Legenda das cores da correção">
+        <span class="legend-t">As 5 cores da correção</span>
+        <ul>
+          <li><i style="background:#D9483B"></i>Acentuação, ortografia, pontuação e vocabulário (linguagem).</li>
+          <li><i style="background:#62CFEA"></i>Estrutura sintática e segmentação.</li>
+          <li><i style="background:#E6B12A"></i>Equívocos conceituais e de informação.</li>
+          <li><i style="background:#3A9A5B"></i>Coesão: uso de conectivos, referenciação e repetição de termos e ideias.</li>
+          <li><i style="background:#F012EE"></i>Comentários sobre a construção dos raciocínios, a articulação entre informações e ideias e a argumentação como um todo.</li>
+        </ul>
+      </div>
+      <div class="annot2">
+        <figure class="scan">
+          <div class="scan-wrap" id="scanWrap">
+            <button type="button" class="zoom-btn" data-zoom="assets/redacao-einstein.jpg" aria-label="Ampliar a redação corrigida"><img src="assets/redacao-einstein.jpg" width="1400" height="1653" loading="lazy" alt="Redação manuscrita de 33 linhas sobre cigarros eletrônicos, com correções em vermelho, inserções acima das linhas e trechos destacados em amarelo e azul."></button>
+            <button type="button" class="pin" data-c="1" style="left:74.5%;top:21.5%" aria-label="Comentário 1">1</button><button type="button" class="pin" data-c="2" style="left:59.5%;top:40.5%" aria-label="Comentário 2">2</button><button type="button" class="pin" data-c="3" style="left:97.0%;top:44.0%" aria-label="Comentário 3">3</button><button type="button" class="pin" data-c="4" style="left:97.4%;top:57.0%" aria-label="Comentário 4">4</button><button type="button" class="pin" data-c="5" style="left:69.5%;top:79.5%" aria-label="Comentário 5">5</button><button type="button" class="pin" data-c="6" style="left:52.5%;top:84.2%" aria-label="Comentário 6">6</button>
+          </div>
+          <figcaption>Clique nos números para ler os meus comentários, ou na imagem para ampliar.</figcaption>
+        </figure>
+        <div class="com-col" hidden>
+          <span class="legend-t">Todos os comentários</span>
+          <ol class="comments"><li id="com-1" data-c="1"><b>1</b><div><small>Linha 8 · estrela rosa</small><p>Você apresentou o tema de forma clara e elaborou a tese de modo a evidenciar os dois argumentos, mas a maneira como eles aparecem precisa ser revista: somente a educação seria de fato suficiente? Era necessário, no segundo argumento, comprovar essa ideia. Além disso, a referência a Lipovetsky não se encaixou bem aqui: qual é a relação entre a ameaça aos valores morais e éticos e o uso de cigarros eletrônicos?</p></div></li><li id="com-2" data-c="2"><b>2</b><div><small>Linha 15 · estrela rosa</small><p>Este período traz a ideia de que o argumento está sendo concluído.</p></div></li><li id="com-3" data-c="3"><b>3</b><div><small>Linhas 16 a 19 · trecho em amarelo</small><p>No texto da coletânea, a especialista se refere aos cigarros tradicionais, e aponta que essas medidas não poderiam ser aplicadas aos DEFs, já que são usadas as redes sociais para sua divulgação.</p></div></li><li id="com-4" data-c="4"><b>4</b><div><small>Linha 20 · estrela rosa</small><p>A primeira parte do argumento, até o terceiro período, é pertinente, mas seria importante justificar por que o vício causado pelos DEFs se sobressai diante das medidas judiciais: esses dispositivos continuam a ser vendidos ilegalmente por meio de redes sociais ou mesmo em camelôs, à sombra da Justiça, mas ainda facilmente encontrados. Por isso, a menção à fala da especialista não se encaixou bem aqui, pois ela está se referindo à proibição de divulgação dos cigarros convencionais na mídia (que tinham propagandas na TV e até apareciam em novelas, por exemplo).</p></div></li><li id="com-5" data-c="5"><b>5</b><div><small>Linha 29 · trecho em azul</small><p>De quê?</p></div></li><li id="com-6" data-c="6"><b>6</b><div><small>Linha 30 · estrela rosa</small><p>Você fez uma boa utilização da coletânea neste argumento, mas é preciso aperfeiçoar a análise das informações apresentadas para que o parágrafo não fique com um tom expositivo, como se sua função fosse a de apenas divulgar essas informações.</p></div></li></ol>
+        </div>
+      </div>
+      <h4 class="sub-h">Sugestão de reescrita · uma conclusão em cerca de cinco linhas</h4>
+      <div class="rewrite">
+        <p class="rw-text"><b>[1]</b> Portanto, a proibição não é a forma mais eficaz de combater o uso de cigarros eletrônicos no Brasil, <b>[2]</b> já que não impede o comércio ilegal nem desfaz a imagem inofensiva que atrai os jovens. <span class="opt"><b>[3]</b> Para que esses dispositivos deixem de parecer um alívio para a pressão descrita por Byung-Chul Han,</span> <span class="opt"><b>[4]</b> o veto a eles deve ser acompanhado de campanhas educativas que esclareçam os riscos de seu uso.</span> <b>[5]</b> Assim, a conscientização poderá alcançar o que a lei, sozinha, não alcança.</p>
+        <ol class="rw-notes">
+          <li><b>[1]</b> <strong>Retoma a tese</strong> e responde à pergunta do tema.</li>
+          <li><b>[2]</b> <strong>Sintetiza os argumentos:</strong> o 1º (venda ilegal) e o 2º (imagem inofensiva).</li>
+          <li class="opt"><b>[3]</b> <strong>Retoma o repertório</strong> da introdução e fecha o círculo.</li>
+          <li class="opt"><b>[4]</b> <strong>Propõe:</strong> proibição + educação, em tom propositivo, sem “somente”.</li>
+          <li><b>[5]</b> <strong>Frase final</strong> que amarra a ideia central.</li>
+        </ol>
+      </div>
+      <p class="why"><span class="opt-key">Destacados em amarelo:</span> os elementos 3 e 4 não são obrigatórios.</p>
+    </article>
+  </div>
+</section>
+
+<section id="materiais">
+  <div class="sec-head">
+    <span class="mark">02 · Materiais e avaliação</span>
+    <h2>Materiais didáticos e itens de avaliação</h2>
+  </div>
+  <div class="body">
+    <div class="scope">
+      <div>
+        <p>Na Escola Móbile, uma das minhas atribuições consistia na elaboração de materiais didáticos e avaliativos, como fichas de exercícios, provas e propostas de redação, além de sequências didáticas.</p>
+        <p>Essa bagagem me levou a integrar a equipe de elaboração e curadoria de itens para o <i>Caderno Mais</i>, livro didático de exercícios voltado aos Anos Finais do Ensino Fundamental, da FTD Educação.</p>
+      </div>
+      <ul class="hl">
+        <li>Autora (freelancer) · FTD Educação<small>2026</small></li>
+        <li>Materiais e avaliações · Escola Móbile<small>2018 – 2026</small></li>
+        <li>Curso PNLD Básico · MEC<small>certificado</small></li>
+      </ul>
+    </div>
+
+    <p class="label-row">Amostras</p>
+    <article class="piece q">
+      <div class="meta"><span class="tag spec">Item autoral de exemplo</span><span class="tag">Produção de Textos · 9º ano do EF</span></div>
+      <h3>Notícia ou crônica? Um fato, dois gêneros</h3>
+      <p class="brief">Exemplo no formato dos itens que elaboro para materiais didáticos: textos-base autorais, comando em etapas e justificativa com a habilidade da BNCC, o nível da Taxonomia de Bloom e a dificuldade. Os itens feitos para editoras não são divulgados.</p>
+      <p class="q-lead">Leia os textos a seguir.</p>
+      <div class="q-texts">
+        <div><small>Texto 1</small><p>Um apagão deixou cerca de 12 mil imóveis sem energia elétrica no bairro Vila Esperança na noite de terça-feira (14). Segundo a concessionária responsável, a interrupção foi causada pela queda de uma árvore sobre a rede elétrica durante a chuva forte. O fornecimento foi restabelecido por volta das 23h. Não houve registro de feridos.</p></div>
+        <div><small>Texto 2</small><p>Na terça-feira, a luz acabou às oito em ponto, bem na hora em que o prédio inteiro jantava diante de alguma tela. Por alguns segundos, ninguém soube o que fazer com as mãos. Depois, as janelas foram se acendendo de velas, e os vizinhos, que mal se cumprimentavam no elevador, descobriram que tinham nomes. Quando a energia voltou, perto das onze, houve quem comemorasse. Eu, confesso, senti uma pontinha de saudade do escuro.</p></div>
+      </div>
+      <p>Os dois textos tratam do mesmo acontecimento, mas pertencem a gêneros diferentes: um é uma notícia, e o outro, uma crônica.</p>
+      <ol class="q-cmd">
+        <li><b>a)</b><span>Indique qual dos textos é a crônica e explique a principal diferença de finalidade entre os dois.</span></li>
+        <li><b>b)</b><span>Transcreva do Texto 2 dois trechos que revelem a subjetividade do narrador ou o uso de linguagem figurada e explique o efeito de sentido de cada um.</span></li>
+      </ol>
+      <div class="q-card">
+        <dl>
+          <div><dt>Habilidade</dt><dd>EF69LP47</dd></div>
+          <div><dt>Taxonomia de Bloom</dt><dd>Analisar</dd></div>
+          <div><dt>Nível de dificuldade</dt><dd>Médio</dd></div>
+        </dl>
+        <p><strong>Justificativa.</strong> Espera-se que os alunos reconheçam que o Texto 2 é a crônica, pois parte de um fato cotidiano para propor uma reflexão pessoal sobre ele, enquanto o Texto 1, a notícia, tem a finalidade de informar o fato de modo objetivo, com dados precisos sobre o número de imóveis atingidos, o horário, a causa e a fonte da informação. Entre os trechos que podem ser transcritos estão “ninguém soube o que fazer com as mãos”, que revela com humor a dependência das telas; “as janelas foram se acendendo de velas”, imagem que transforma o apagão em uma cena quase festiva; e “Eu, confesso, senti uma pontinha de saudade do escuro”, marca de primeira pessoa e de subjetividade que conduz à reflexão final do texto.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="revisao">
+  <div class="sec-head">
+    <span class="mark">03 · Revisão e edição</span>
+    <h2>Revisão acadêmica e editorial</h2>
+  </div>
+  <div class="body">
+    <div class="scope">
+      <div>
+        <p>Reviso textos acadêmicos desde 2016, de TCCs e artigos de Direito a uma tese de doutorado em Matemática Pura. Cuido de norma, coesão e clareza sem mexer na voz do autor.</p>
+        <p>Tenho experiência com normalização de trabalhos acadêmicos e científicos segundo as normas da ABNT, da APA e de Vancouver: citações, referências, tabelas, figuras e estrutura do trabalho.</p>
+        <p>Na Tikinet, agência editorial, fiz preparação, revisão e normalização de conteúdos acadêmicos e educacionais, como revistas científicas e cursos, em contato direto com editoras e autores.</p>
+      </div>
+      <ul class="hl">
+        <li>Assistente Editorial · Tikinet · revistas científicas e cursos<small>2026</small></li>
+        <li>Revisão de TCCs, artigos e teses<small>desde 2016</small></li>
+        <li>Normalização · ABNT, APA e Vancouver<small>acadêmica</small></li>
+        <li>Curso A Edição do Livro · Unil/Unesp<small>certificado</small></li>
+      </ul>
+    </div>
+
+    <p class="label-row">Amostras</p>
+<article class="piece">
+      <div class="meta"><span class="tag spec">Exemplo autoral</span><span class="tag">Revisão acadêmica</span></div>
+      <h3>Trecho de TCC revisado</h3>
+      <p class="brief">Revisão e normalização de um parágrafo de resultados, com ajustes de norma, pontuação e concisão, sem mexer no conteúdo do autor.</p>
+      <div class="ba">
+        <div class="before"><small>Original</small>Através da análise dos dados coletados, pode-se perceber que, os alunos que participaram da oficina, apresentaram melhoras significativas na escrita, como mostra a tabela 2 abaixo, aonde os resultados estão expostos. Esse dado confirma que a escrita se desenvolve com a prática orientada (Soares 2020 pág. 32).</div>
+        <div class="after"><small>Revisado</small>A análise dos dados coletados mostra que os alunos que participaram da oficina apresentaram melhora significativa na escrita, conforme a <mark class="norm">Tabela 2</mark>. Esse dado confirma que a escrita se desenvolve com a prática orientada <mark class="norm">(Soares, 2020, p. 32)</mark>.</div>
+      </div>
+      <p class="why">Tirei as vírgulas entre sujeito e verbo, troquei "através de" por uma construção direta, corrigi "aonde" e padronizei a remissão à tabela com inicial maiúscula. Na citação, apliquei o sistema autor-data da ABNT (NBR 10520): autor, ano e página separados por vírgula, com a abreviatura “p.” para página. Os ajustes de normalização estão destacados em amarelo.</p>
+    </article>
+  </div>
+</section>
+
+<section id="seo">
+  <div class="sec-head">
+    <span class="mark">04 · Redação SEO</span>
+    <h2>Conteúdo para web que responde a uma busca</h2>
+  </div>
+  <div class="body">
+    <div class="scope">
+      <div>
+        <p>Na mybest, site especializado em guias de compras, escrevi artigos otimizados para buscadores (SEO) com recomendações de produtos. Os textos reúnem informações relevantes e objetivas para ajudar o leitor a fazer a melhor escolha.</p>
+        <p>Em alguns artigos, conduzi o processo completo, do mapeamento dos produtos à entrevista com especialista. Em outros, redigi o texto a partir de mapeamentos prontos.</p>
+      </div>
+      <ul class="hl">
+        <li>Redatora SEO · mybest, Inc.<small>2025 – 2026</small></li>
+        <li>Curso UX Writing · ESPM<small>certificado</small></li>
+        <li>Curso Marketing e Comunicação Digital · ECA-USP<small>certificado</small></li>
+      </ul>
+    </div>
+
+    <p class="label-row">Amostras</p>
+<article class="piece">
+      <div class="meta"><span class="tag">Redação SEO · mybest</span><span class="tag">Artigo de produto</span></div>
+      <h3>Um artigo do zero, do mapeamento à publicação</h3>
+      <p class="brief">Fiz todas as etapas deste artigo: mapeamento, pesquisa, entrevista com especialista e redação final, com foco em SEO e em informação objetiva para quem vai escolher um produto.</p>
+      <div class="flow seo">
+        <div><strong>Mapeamento</strong>Levantamento dos produtos e do que o leitor busca.<br><span>ETAPA 1</span></div>
+        <div><strong>Pesquisa</strong>Avaliações de compradores na Amazon, no Mercado Livre e na Shopee, mais dados técnicos.<br><span>ETAPA 2</span></div>
+        <div><strong>Entrevista</strong>Roteiro de perguntas para o especialista consultado.<br><span>ETAPA 3</span></div>
+        <div><strong>Redação SEO</strong>Texto otimizado para busca, objetivo e útil para o leitor.<br><span>ETAPA 4</span></div>
+      </div>
+      <p style="margin:0">Leia o artigo: <a href="https://br.my-best.com/22489">Melhores removedores de cílios (mybest)</a></p>
+      <p class="why">Na mybest, o crédito de "Revisora" é dado a quem produz o artigo inteiro, do mapeamento à redação final. Por isso meu nome aparece assim na página.</p>
+      <h4 class="seo-h">Outros artigos que redigi</h4>
+      <div class="chips topics">
+        <span class="chip">Caixas de som para PC</span><span class="chip">Antipulgas para gatos</span><span class="chip">Notebooks 2 em 1</span><span class="chip">Liquidificadores</span><span class="chip">Celulares Realme</span><span class="chip">Teclados</span><span class="chip">Luminárias de jardim</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="design">
+  <div class="sec-head">
+    <span class="mark">05 · Design instrucional</span>
+    <h2>Do conteúdo à experiência de aprendizagem</h2>
+  </div>
+  <div class="body">
+    <div class="scope">
+      <div>
+        <p>Atualmente, faço especialização em Design Instrucional no Senac. Meu objetivo é unir a experiência no ensino da escrita ao planejamento de cursos e materiais digitais.</p>
+        <p>A seguir, apresento meu primeiro projeto na área, ainda em desenvolvimento.</p>
+      </div>
+      <ul class="hl">
+        <li>Especialização em Design Instrucional · Senac<small>2026 – 2027</small></li>
+      </ul>
+    </div>
+
+    <p class="label-row">Amostras</p>
+<article class="case">
+      <span class="tag spec">Em desenvolvimento · microcurso on-line</span>
+      <h3>Da tese à intervenção: um microcurso sobre a proposta de intervenção no Enem</h3>
+      <p class="sub">Um curso curto, para estudar sozinho pelo celular, que ensina o aluno a escrever a proposta de intervenção completa e ligada à tese do texto.</p>
+
+      <div class="trio">
+        <div><small>Problema</small>A competência 5 do Enem avalia a proposta de intervenção. Na correção, ela costuma aparecer vaga, sem agente, meio ou finalidade.</div>
+        <div><small>Público</small>Estudantes do 3º ano do Ensino Médio e de cursinhos, que estudam sozinhos, em sessões de cerca de 30 minutos.</div>
+        <div><small>Objetivo</small>Ao final, o aluno escreve uma proposta com os cinco elementos exigidos e articulada à sua tese.</div>
+      </div>
+
+      <h4>Estrutura em 4 módulos</h4>
+      <div class="flow">
+        <div><strong>Diagnóstico</strong>O aluno revisa uma proposta que já escreveu e se autoavalia.<br><span>MÓDULO 1 · 20 MIN</span></div>
+        <div><strong>Os 5 elementos</strong>Análise de propostas comentadas, das incompletas às completas.<br><span>MÓDULO 2 · 30 MIN</span></div>
+        <div><strong>Prática guiada</strong>Completar e corrigir propostas, com feedback imediato.<br><span>MÓDULO 3 · 30 MIN</span></div>
+        <div><strong>Produção final</strong>Nova proposta, avaliada com a rubrica e devolutiva.<br><span>MÓDULO 4 · 30 MIN</span></div>
+      </div>
+
+      <h4>Rubrica de avaliação</h4>
+      <div class="rubric-wrap">
+        <table class="rubric">
+          <thead><tr><th>Elemento</th><th>O que o aluno precisa mostrar</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>Agente</td><td>Quem vai executar a ação, de forma específica</td><td>o Ministério da Educação</td></tr>
+            <tr><td>Ação</td><td>O que será feito</td><td>ampliar bibliotecas escolares</td></tr>
+            <tr><td>Meio ou modo</td><td>Como a ação vai acontecer</td><td>por meio de verbas do PNLD</td></tr>
+            <tr><td>Finalidade</td><td>Para que a ação serve, ligada à tese</td><td>a fim de aproximar os jovens da leitura</td></tr>
+            <tr><td>Detalhamento</td><td>Uma informação a mais sobre qualquer elemento</td><td>com acervo escolhido pelos próprios alunos</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h4>Abordagem</h4>
+          <p style="margin:0;font-size:16px">Usei o design reverso: defini primeiro a evidência de aprendizagem (a rubrica) e só depois as atividades. Cada módulo combina um exemplo comentado, uma prática curta e um retorno imediato.</p>
+        </div>
+        <div>
+          <h4>Etapas</h4>
+          <ul class="checks">
+            <li class="done">Análise do público e objetivos de aprendizagem</li>
+            <li class="done">Rubrica e estrutura dos módulos</li>
+            <li>Protótipo navegável do módulo 2</li>
+            <li>Teste com estudantes e ajustes</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="sec-head">
+    <span class="mark">06 · Sobre</span>
+    <h2>Dez anos entre a sala de aula e a revisão</h2>
+  </div>
+  <div class="body two">
+    <div>
+      <img class="me" src="assets/leticia.jpg" width="640" height="640" alt="Retrato de Letícia Gazinhato, de cabelo curto castanho e camiseta branca, sorrindo levemente diante de uma parede clara.">
+      <p>Meu trabalho com o texto começou em 2016, em duas frentes ao mesmo tempo. Na revisão, comecei pelos artigos acadêmicos da minha irmã, estudante de Relações Internacionais, e revisei também o TCC dela, aprovado com êxito.</p>
+      <p>Na educação, comecei como monitora de Língua Portuguesa e passei mais de oito anos na Escola Móbile, onde ensinei produção de texto. Nesse período, continuei a revisar trabalhos acadêmicos de áreas muito diferentes, de artigos de Direito a uma tese de doutorado em Matemática Pura.</p>
+      <p>Hoje levo esse olhar para tudo o que faço: ensino, revisão, materiais didáticos e textos para a web.</p>
+    </div>
+    <div class="side">
+      <figure class="pet">
+        <img src="assets/chiquinha.jpg" width="1000" height="841" alt="Chiquinha, gata rajada, dormindo com a cabeça apoiada sobre um dicionário Houaiss amarelo.">
+        <figcaption>Chiquinha, minha assistente, em consulta aprofundada ao Houaiss</figcaption>
+      </figure>
+    <ul class="list" aria-label="Formação e idiomas">
+      <li><span>Letras (Português/Alemão) · USP</span><span>2015 – 2019</span></li>
+      <li><span>Especialização em Design Instrucional · Senac</span><span>em andamento</span></li>
+      <li><span>Português</span><span>nativo</span></li>
+      <li><span>Inglês</span><span>avançado</span></li>
+      <li><span>Alemão</span><span>intermediário</span></li>
+    </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contato" style="border-bottom:0">
+  <div class="sec-head">
+    <span class="mark">07 · Contato</span>
+    <h2>Vamos trabalhar juntos</h2>
+  </div>
+  <div class="body">
+    <p style="max-width:58ch;margin:0 0 28px;font-size:21px">Estou em busca de oportunidades em editoras e empresas de educação, nas áreas de redação, revisão e preparação de textos, elaboração de materiais didáticos e avaliativos e design instrucional.</p>
+    <div class="contact-lines">
+      <div><span>E-mail</span><a href="mailto:leticia.gazinhato@gmail.com">leticia.gazinhato@gmail.com</a></div>
+      <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/leticiagazinhato">linkedin.com/in/leticiagazinhato</a></div>
+      <div><span>Local</span>São Bernardo do Campo, SP</div>
+      <div><span>Formato</span>Remoto, híbrido ou presencial em São Paulo e Grande ABC · também aceito projetos freelance</div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Letícia Gazinhato</footer>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <button type="button" class="lb-close" id="lbClose">Fechar ✕</button>
+  <img id="lbImg" alt="">
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'), img=document.getElementById('lbImg'), close=document.getElementById('lbClose'), last=null;
+  function open(btn){ last=btn; img.src=btn.getAttribute('data-zoom'); var i=btn.querySelector('img'); img.alt=i?i.alt:''; lb.classList.add('show'); document.body.style.overflow='hidden'; close.focus(); }
+  function shut(){ lb.classList.remove('show'); document.body.style.overflow=''; if(last) last.focus(); }
+  document.querySelectorAll('[data-zoom]').forEach(function(b){ b.addEventListener('click',function(){ open(b); }); });
+  close.addEventListener('click',shut);
+  lb.addEventListener('click',function(e){ if(e.target===lb) shut(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && lb.classList.contains('show')) shut(); });
+})();
+</script>
+<script>
+(function(){
+  var wrap=document.getElementById('scanWrap'); if(!wrap) return;
+  var pop=document.createElement('div'); pop.className='pop'; pop.setAttribute('role','dialog');
+  pop.innerHTML='<button type="button" aria-label="Fechar comentário">✕</button><small></small><p></p>';
+  wrap.appendChild(pop);
+  var cur=null;
+  function hide(){ pop.classList.remove('show'); document.querySelectorAll('.pin,.comments li').forEach(function(el){ el.classList.remove('on'); }); if(cur) cur.focus(); cur=null; }
+  function show(pin){
+    var n=pin.getAttribute('data-c'), li=document.getElementById('com-'+n);
+    pop.querySelector('small').textContent=li.querySelector('small').textContent;
+    pop.querySelector('p').textContent=li.querySelector('p').textContent;
+    document.querySelectorAll('.pin,.comments li').forEach(function(el){ el.classList.toggle('on',el.getAttribute('data-c')===n); });
+    pop.classList.add('show');
+    var W=wrap.clientWidth, H=wrap.clientHeight, x=pin.offsetLeft, y=pin.offsetTop, pw=pop.offsetWidth, ph=pop.offsetHeight;
+    var left = x > W*0.55 ? x-pw-22 : x+22; left=Math.max(4,Math.min(left,W-pw-4));
+    var top = y-20; top=Math.max(4,Math.min(top,H-ph-4));
+    pop.style.left=left+'px'; pop.style.top=top+'px'; cur=pin;
+  }
+  document.querySelectorAll('.pin').forEach(function(p){ p.addEventListener('click',function(e){ e.stopPropagation(); if(cur===p){ hide(); } else show(p); }); });
+  pop.querySelector('button').addEventListener('click',function(e){ e.stopPropagation(); hide(); });
+  pop.addEventListener('click',function(e){ e.stopPropagation(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && pop.classList.contains('show')) hide(); });
+  document.addEventListener('click',function(e){ if(pop.classList.contains('show') && !e.target.closest('.pin')) { pop.classList.remove('show'); document.querySelectorAll('.pin,.comments li').forEach(function(el){ el.classList.remove('on'); }); cur=null; } });
+})();
+</script>
+</body>
+</html>
