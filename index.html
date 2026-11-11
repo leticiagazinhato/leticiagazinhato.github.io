@@ -212,6 +212,24 @@ table.rubric{border-collapse:collapse;width:100%;font-size:15.5px;min-width:520p
 .label-row::after{content:"";flex:1;height:1px;background:var(--rule)}
 .chips.inblock{margin:16px 0 0}
 .scan{margin:0 0 28px}
+.case + .case{margin-top:24px}
+.mix{display:grid;grid-template-columns:1fr 220px 1fr;gap:18px;align-items:center;margin:4px 0 14px}
+.mix-side h4{margin:0 0 6px}
+.mix-side p{margin:0;font-size:15.5px}
+.venn{width:100%;height:auto}
+.note-line{font-size:15.5px;background:var(--paper);border-left:3px solid var(--ink);padding:10px 14px;margin:0 0 28px}
+.mini{margin:-2px 0 10px;font-size:15.5px;color:var(--ink-soft)}
+.flow div.hot{background:#DDEBEE}
+.flow div span{display:block}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 30px}
+.steps3 div{border:1px solid var(--rule);padding:14px 16px;font-size:15px;background:#fff;position:relative}
+.steps3 div.open{background:#FBEAE4;border-color:#F2B7A6}
+.steps3 strong{display:block;font-family:var(--display);font-weight:400;font-size:21px;margin-bottom:4px}
+.steps3 .kind{position:absolute;top:12px;right:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.steps3 .open .kind{color:var(--pencil)}
+.why-list{margin:0;padding-left:18px;font-size:15.5px;display:grid;gap:4px}
+.refl{margin:0;font-size:16px;font-family:var(--display);font-style:italic;font-size:20px;line-height:1.4}
+@media (max-width:820px){.mix{grid-template-columns:1fr}.venn{max-width:240px;margin:0 auto}.steps3{grid-template-columns:1fr}}
 .annot2{display:grid;gap:22px;margin-bottom:8px}
 .annot2 .scan{margin:0}
 .scan-wrap{position:relative}
@@ -343,7 +361,7 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
   <a href="#materiais"><span>02</span><strong>Materiais e avaliação</strong><em>Materiais didáticos e avaliativos para escolas e editora</em></a>
   <a href="#revisao"><span>03</span><strong>Revisão e edição</strong><em>TCCs, artigos científicos e conteúdo editorial</em></a>
   <a href="#seo"><span>04</span><strong>Redação SEO</strong><em>Artigos de produto da pesquisa ao texto final</em></a>
-  <a href="#design"><span>05</span><strong>Design instrucional</strong><em>Especialização no Senac e primeiro projeto autoral</em></a>
+  <a href="#design"><span>05</span><strong>Design instrucional</strong><em>Especialização no Senac, onboarding corporativo e microcurso autoral</em></a>
 </nav>
 
 <section id="ensino">
@@ -539,7 +557,7 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
     <div class="scope">
       <div>
         <p>Atualmente, faço especialização em Design Instrucional no Senac. Meu objetivo é unir a experiência no ensino da escrita ao planejamento de cursos e materiais digitais.</p>
-        <p>A seguir, apresento meu primeiro projeto na área, ainda em desenvolvimento.</p>
+        <p>A seguir, apresento um trabalho da especialização e um projeto autoral ainda em desenvolvimento.</p>
       </div>
       <ul class="hl">
         <li>Especialização em Design Instrucional · Senac<small>2026 – 2027</small></li>
@@ -547,6 +565,61 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
     </div>
 
     <p class="label-row">Amostras</p>
+    <article class="case onb">
+      <span class="tag spec">Trabalho da especialização · Tópicos em Design Instrucional</span>
+      <h3>Onboarding Modelize: um modelo de DI misto para integrar novos colaboradores</h3>
+      <p class="sub">Avaliação final da disciplina: escolher e justificar um modelo de design instrucional para o onboarding de uma empresa, a partir de um estudo de caso com briefing incompleto.</p>
+
+      <div class="trio">
+        <div><small>Desafio</small>Cerca de 80 novos colaboradores por ano, no país todo, com idades, formações e funções muito diferentes. Dois objetivos: conhecer a estrutura e os benefícios da empresa e sentir-se parte dela.</div>
+        <div><small>Restrições</small>Tudo no celular, em 2 horas por semana e sem encontros síncronos. Orçamento, plataforma e conteúdos disponíveis ainda não estavam definidos.</div>
+        <div><small>Proposta</small>Design instrucional misto (Filatro, 2019): conteúdo institucional padronizado combinado com espaços de troca mediados por gestores e RH.</div>
+      </div>
+
+      <div class="mix">
+        <div class="mix-side"><h4>Fixo · igual para todos</h4><p>Propósito, estrutura e benefícios em microconteúdos para celular: vídeos curtos, infográficos e guia interativo.</p></div>
+        <svg class="venn" viewBox="0 0 220 130" role="img" aria-label="Diagrama: os modelos fixo e aberto se sobrepõem e formam o modelo misto">
+          <circle cx="80" cy="65" r="58" fill="#9EC3CC" fill-opacity=".75"/>
+          <circle cx="140" cy="65" r="58" fill="#F2B7A6" fill-opacity=".75"/>
+          <text x="52" y="70" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="17" fill="#14213D">FIXO</text>
+          <text x="110" y="70" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="14" fill="#14213D">misto</text>
+          <text x="168" y="70" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="17" fill="#14213D">ABERTO</text>
+        </svg>
+        <div class="mix-side"><h4>Aberto · construído na troca</h4><p>Mural e comunidades na intranet, desafios entre colegas e mediação de gestores e RH, ajustados a cada turma.</p></div>
+      </div>
+      <p class="note-line"><b>Como construir:</b> pelo modelo SAM, com um protótipo testado por uma turma-piloto antes da versão final, o que ajuda diante das informações que ainda faltam sobre o cliente.</p>
+
+      <h4>Na prática: trilha “Passaporte Modelize”</h4>
+      <p class="mini">4 semanas, 2 horas por semana, no celular. Cada etapa concluída vale um carimbo no passaporte.</p>
+      <div class="flow">
+        <div><strong>Quem somos</strong><span>SEMANA 1</span></div>
+        <div class="hot"><strong>Como nos organizamos</strong><span>SEMANA 2 · EM DESTAQUE</span></div>
+        <div><strong>Meus benefícios</strong><span>SEMANA 3</span></div>
+        <div><strong>Somos parte</strong><span>SEMANA 4</span></div>
+      </div>
+
+      <h4>Em destaque na semana 2: o jogo “Tripulações”</h4>
+      <div class="steps3">
+        <div><span class="kind">Fixo</span><strong>1. Explorar</strong>O colaborador navega por um mapa interativo das áreas, com vídeos de 1 minuto em que cada líder apresenta seu time.</div>
+        <div><span class="kind">Fixo</span><strong>2. Resolver</strong>Ele liga cada tripulação, descrita pelo que faz, ao avião da sua área. No fim, o jogo revela as fotos das equipes.</div>
+        <div class="open"><span class="kind">Aberto</span><strong>3. Compartilhar</strong>O colaborador posta no mural da intranet uma pergunta para alguma área, em foto, áudio ou texto, e os líderes respondem.</div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h4>Por que não os outros modelos</h4>
+          <ul class="why-list">
+            <li><b>Fixo puro:</b> informa, mas não cria vínculo.</li>
+            <li><b>Aberto puro:</b> torna difícil padronizar direitos e benefícios.</li>
+            <li><b>Contextualizado:</b> exige tecnologia adaptativa e verba ainda não confirmadas.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>O que aprendi</h4>
+          <p class="refl">Escolher um modelo com poucas informações do cliente, sem saber orçamento, plataforma ou conteúdos disponíveis, me fez valorizar o papel da DI como boa “perguntadora” e a lógica de prototipar antes de fechar a solução.</p>
+        </div>
+      </div>
+    </article>
 <article class="case">
       <span class="tag spec">Em desenvolvimento · microcurso on-line</span>
       <h3>Da tese à intervenção: um microcurso sobre a proposta de intervenção no Enem</h3>
