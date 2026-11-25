@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Letícia Gazinhato · Portfólio</title>
-<meta name="description" content="Portfólio de Letícia Gazinhato, professora de redação, revisora e autora de conteúdo educacional.">
+<meta name="description" content="Portfólio de Letícia Gazinhato, professora de redação, revisora, autora de conteúdo educacional e UX writer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -320,7 +320,7 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
 .label-row::after{background:rgba(20,33,61,.18)}
 .toc{gap:12px;border-bottom:0;padding:28px 0}
 .toc a,.toc a:first-child{border:0;border-radius:4px;padding:18px 18px 20px}
-.toc a:nth-child(1){background:var(--t-ensino)} .toc a:nth-child(2){background:var(--t-materiais)} .toc a:nth-child(3){background:var(--t-revisao)} .toc a:nth-child(4){background:var(--t-seo)} .toc a:nth-child(5){background:var(--t-design)}
+.toc a:nth-child(1){background:var(--t-ensino)} .toc a:nth-child(2){background:var(--t-materiais)} .toc a:nth-child(3){background:var(--t-revisao)} .toc a:nth-child(4){background:var(--t-seo)} .toc a:nth-child(5){background:var(--t-ux)}
 .toc a{transition:transform .15s ease} .toc a:hover{transform:translateY(-2px)}
 .hilite{background:linear-gradient(transparent 58%,var(--marca) 58%,var(--marca) 92%,transparent 92%);padding:0 .05em}
 .chip{border-color:rgba(20,33,61,.2)}
@@ -329,6 +329,32 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
 @media (max-width:900px){.toc a{border-bottom:0}}
 @media (max-width:900px){.toc{grid-template-columns:1fr 1fr}.toc a{border-right:0}.scope{grid-template-columns:1fr}}
 @media (max-width:480px){.toc{grid-template-columns:1fr}}
+</style>
+<style>
+/* v13: UX Writing */
+:root{--t-ux:#E1F1F2}
+#ux{--band:var(--t-ux);border-bottom:0;box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax);background:var(--band)}
+.toc{grid-template-columns:repeat(3,1fr)}
+.toc a:nth-child(6){background:var(--t-design)}
+.flow.five{grid-template-columns:repeat(5,1fr)}
+.mc{display:grid;gap:12px;margin:6px 0 30px}
+.mc-row{display:grid;grid-template-columns:150px 1fr 1.2fr;border:1px solid var(--rule);background:#fff}
+.mc-row > *{padding:14px 16px;font-size:15.5px;line-height:1.5}
+.mc-row .where{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);background:var(--paper);border-right:1px solid var(--rule)}
+.mc-row .where b{display:block;font-family:var(--display);font-size:20px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:400;margin-top:2px}
+.mc-row .old{color:var(--ink-soft);border-right:1px solid var(--rule)}
+.mc-row .old q{text-decoration:line-through;text-decoration-color:var(--pencil);text-decoration-thickness:1.5px}
+.mc-row small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.mc-row .new small{color:var(--pencil)}
+.mc-row .new p{margin:0 0 8px;color:var(--ink)}
+.mc-row .new p.why{margin:8px 0 0;font-size:14px;color:var(--ink-soft)}
+.mc-row.err .where{background:#FBEAE4}
+.cta-mock{display:inline-block;font:600 13.5px/1.2 var(--body);padding:7px 12px;border-radius:999px;background:var(--ink);color:#fff;margin:2px 6px 2px 0;border:1.5px solid var(--ink)}
+.cta-mock.sec{background:transparent;color:var(--ink)}
+.rules{margin:0 0 28px;padding-left:18px;display:grid;gap:4px;font-size:16px}
+@media (max-width:900px){.toc{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.flow.five{grid-template-columns:1fr 1fr}.mc-row{grid-template-columns:1fr}.mc-row .where,.mc-row .old{border-right:0;border-bottom:1px solid var(--rule)}}
+@media (max-width:480px){.toc{grid-template-columns:1fr}.flow.five{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -341,15 +367,16 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
     <a href="#materiais">Materiais</a>
     <a href="#revisao">Revisão</a>
     <a href="#seo">SEO</a>
+    <a href="#ux">UX Writing</a>
     <a href="#design">Design instrucional</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <div class="hero">
-  <p class="kicker">Professora de redação · Revisora · Autora de conteúdo educacional</p>
+  <p class="kicker">Professora de redação · Revisora · Conteúdo educacional · UX Writing</p>
   <h1>Há <span class="hilite">mais de 10 anos</span> ajudo pessoas a escrever <span class="fix"><del>difícil</del><ins>com clareza</ins></span>.</h1>
-  <p class="lede">Ensino a escrever, corrijo e reviso textos, elaboro materiais didáticos e avaliativos e escrevo para a web. Agora levo essa experiência para o design instrucional.</p>
+  <p class="lede">Ensino a escrever, corrijo e reviso textos, elaboro materiais didáticos e avaliativos e escrevo para a web. Agora levo essa experiência para o design instrucional e o UX Writing.</p>
   <div class="cta">
     <a class="btn" href="#ensino">Ver trabalhos</a>
     <a class="btn ghost" href="https://www.linkedin.com/in/leticiagazinhato">LinkedIn</a>
@@ -361,7 +388,8 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
   <a href="#materiais"><span>02</span><strong>Materiais e avaliação</strong><em>Materiais didáticos e avaliativos para escolas e editora</em></a>
   <a href="#revisao"><span>03</span><strong>Revisão e edição</strong><em>TCCs, artigos científicos e conteúdo editorial</em></a>
   <a href="#seo"><span>04</span><strong>Redação SEO</strong><em>Artigos de produto da pesquisa ao texto final</em></a>
-  <a href="#design"><span>05</span><strong>Design instrucional</strong><em>Especialização no Senac, onboarding corporativo e microcurso autoral</em></a>
+  <a href="#ux"><span>05</span><strong>UX Writing</strong><em>Microtextos e guia de voz e tom para um app de banco</em></a>
+  <a href="#design"><span>06</span><strong>Design instrucional</strong><em>Especialização no Senac, onboarding corporativo e microcurso autoral</em></a>
 </nav>
 
 <section id="ensino">
@@ -404,7 +432,7 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
       <div class="annot2">
         <figure class="scan">
           <div class="scan-wrap" id="scanWrap">
-            <button type="button" class="zoom-btn" data-zoom="assets/redacao-einstein.jpg" aria-label="Ampliar a redação corrigida"><img src="assets/redacao-einstein.jpg" width="1400" height="1653" loading="lazy" alt="Redação manuscrita de 33 linhas sobre cigarros eletrônicos, com correções em vermelho, inserções acima das linhas e trechos destacados em amarelo e azul."></button>
+            <button type="button" class="zoom-btn" data-zoom="https://leticiagazinhato.github.io/assets/redacao-einstein.jpg" aria-label="Ampliar a redação corrigida"><img src="https://leticiagazinhato.github.io/assets/redacao-einstein.jpg" width="1400" height="1653" loading="lazy" alt="Redação manuscrita de 33 linhas sobre cigarros eletrônicos, com correções em vermelho, inserções acima das linhas e trechos destacados em amarelo e azul."></button>
             <button type="button" class="pin" data-c="1" style="left:74.5%;top:21.5%" aria-label="Comentário 1">1</button><button type="button" class="pin" data-c="2" style="left:59.5%;top:40.5%" aria-label="Comentário 2">2</button><button type="button" class="pin" data-c="3" style="left:97.0%;top:44.0%" aria-label="Comentário 3">3</button><button type="button" class="pin" data-c="4" style="left:97.4%;top:57.0%" aria-label="Comentário 4">4</button><button type="button" class="pin" data-c="5" style="left:69.5%;top:79.5%" aria-label="Comentário 5">5</button><button type="button" class="pin" data-c="6" style="left:52.5%;top:84.2%" aria-label="Comentário 6">6</button>
           </div>
           <figcaption>Clique nos números para ler os meus comentários, ou na imagem para ampliar.</figcaption>
@@ -522,7 +550,7 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
       </div>
       <ul class="hl">
         <li>Redatora SEO · mybest, Inc.<small>2025 – 2026</small></li>
-        <li>Curso UX Writing · ESPM<small>certificado</small></li>
+        <li>Curso <i>UX Writing – Da Experiência ao Conteúdo</i> · ESPM<small>certificado</small></li>
         <li>Curso Marketing e Comunicação Digital · ECA-USP<small>certificado</small></li>
       </ul>
     </div>
@@ -548,9 +576,108 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
   </div>
 </section>
 
+<section id="ux">
+  <div class="sec-head">
+    <span class="mark">05 · UX Writing</span>
+    <h2>Palavras que fazem a interface funcionar</h2>
+  </div>
+  <div class="body">
+    <div class="scope">
+      <div>
+        <p>Em 2025, fiz os cursos <i>UX Writing – Da Experiência ao Conteúdo</i>, na ESPM, e <i>Marketing e Comunicação Digital</i>, pela ECA-USP, com os quais pude aprender sobre Design Thinking, arquitetura da informação, acessibilidade e metodologias ágeis. Agora aplico esses conhecimentos em microtextos para produtos digitais.</p>
+        <p>Meu ponto de partida é o mesmo da sala de aula e da revisão: entender o leitor, tirar o que atrapalha e dar instruções claras.</p>
+      </div>
+      <ul class="hl">
+        <li>Curso <i>UX Writing – Da Experiência ao Conteúdo</i> · ESPM<small>certificado</small></li>
+        <li>Curso Marketing e Comunicação Digital · ECA-USP<small>certificado</small></li>
+        <li>Linguagem simples e acessibilidade<small>estudo</small></li>
+      </ul>
+    </div>
+
+    <p class="label-row">Case</p>
+    <article class="case">
+      <span class="tag spec">Projeto de estudo · banco fictício</span>
+      <h3>Pix sem susto: microtextos para enviar dinheiro com segurança</h3>
+      <p class="sub">Reescrita dos textos do fluxo de Pix do Banco Aurora, um banco fictício, para que o usuário entenda cada etapa e saiba o que fazer quando algo dá errado.</p>
+
+      <div class="trio">
+        <div><small>Problema</small>Textos que falam a língua do sistema: códigos de erro, mensagens sem saída, botões genéricos como “OK” e “Confirmar” e um tom que culpa o usuário pelo erro.</div>
+        <div><small>Público</small>Usuários de todas as idades e níveis de familiaridade com apps, que usam o celular e têm medo de errar o valor ou o destinatário da transação.</div>
+        <div><small>Objetivo</small>Em cada tela, o usuário deverá saber com clareza o que está fazendo, o que vem depois e, se algo falhar, se o dinheiro saiu ou não.</div>
+      </div>
+
+      <h4>Arquitetura da informação: uma decisão por tela</h4>
+      <div class="flow five">
+        <div><strong>Para quem</strong>Chave Pix<br><span>TELA 1</span></div>
+        <div><strong>Quanto</strong>Valor e saldo<br><span>TELA 2</span></div>
+        <div class="hot"><strong>Revisão</strong>Na ordem do preenchimento<br><span>TELA 3</span></div>
+        <div><strong>Enviar</strong>Valor e nome no botão<br><span>TELA 4</span></div>
+        <div><strong>Pronto</strong>Comprovante e próximo passo<br><span>TELA 5</span></div>
+      </div>
+
+      <h4>Voz e tom</h4>
+      <p class="mini">A voz do Aurora é clara, calma e parceira. Ela não muda; o tom se ajusta ao momento.</p>
+      <div class="rubric-wrap">
+        <table class="rubric">
+          <thead><tr><th>Momento</th><th>Tom</th><th>Como soa</th></tr></thead>
+          <tbody>
+            <tr><td>Preenchimento</td><td>Direto</td><td>Uma instrução por vez, com o verbo no começo</td></tr>
+            <tr><td>Revisão</td><td>Cuidadoso</td><td>Destaca o que não tem volta, sem alarmar</td></tr>
+            <tr><td>Sucesso</td><td>Leve</td><td>Confirma e mostra o próximo passo</td></tr>
+            <tr><td>Erro</td><td>Acolhedor</td><td>Explica o motivo, sem culpar o usuário, e oferece uma saída</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Regras do guia de escrita</h4>
+      <ul class="rules">
+        <li>O botão diz a ação: “Enviar R$ 150,00”, e não “Confirmar”.</li>
+        <li>Mensagem de erro = o que aconteceu + por quê + o que fazer.</li>
+        <li>Frases de até 15 palavras, na voz ativa e sem códigos de sistema.</li>
+        <li>“Você” para o usuário; “nós” só quando o app assume uma falha.</li>
+      </ul>
+
+      <h4>Antes e depois</h4>
+      <div class="mc">
+        <div class="mc-row"><div class="where">Tela 1<b>Chave</b></div><div class="old"><small>Antes</small><q>Informe a chave Pix do favorecido</q></div><div class="new"><small>Depois</small><p>Para quem você quer enviar?</p><p class="why">Campo com exemplo concreto: “CPF, celular, e-mail ou chave aleatória”. “Favorecido” sai de cena.</p></div></div>
+        <div class="mc-row"><div class="where">Tela 2<b>Valor</b></div><div class="old"><small>Antes</small><q>Digite o valor da transação</q> · botão <q>Continuar</q></div><div class="new"><small>Depois</small><p>Quanto você quer enviar? <br>Saldo disponível: R$ 820,00</p><span class="cta-mock">Revisar envio</span><p class="why">Mostrar o saldo evita o erro antes que ele aconteça.</p></div></div>
+        <div class="mc-row"><div class="where">Tela 3<b>Revisão</b></div><div class="old"><small>Antes</small><q>Confira os dados da operação</q></div><div class="new"><small>Depois</small><p>Confira antes de enviar. Depois de enviado, o Pix não pode ser cancelado.</p><p class="why">Deixa claro o que não tem volta.</p></div></div>
+        <div class="mc-row"><div class="where">Tela 4<b>Confirmação</b></div><div class="old"><small>Antes</small>Botão <q>Confirmar</q></div><div class="new"><small>Depois</small><span class="cta-mock">Enviar R$ 150,00 para Ana Souza</span><p class="why">Valor e nome aparecem no momento da decisão.</p></div></div>
+        <div class="mc-row"><div class="where">Tela 5<b>Sucesso</b></div><div class="old"><small>Antes</small><q>Operação realizada com sucesso</q></div><div class="new"><small>Depois</small><p>Pix enviado! Ana já recebeu sua transferência.</p><span class="cta-mock">Ver comprovante</span><span class="cta-mock sec">Voltar ao início</span></div></div>
+        <div class="mc-row err"><div class="where">Erro<b>Saldo</b></div><div class="old"><small>Antes</small><q>Saldo insuficiente</q></div><div class="new"><small>Depois</small><p>Seu saldo é menor que o valor do Pix. Que tal enviar um valor menor?</p><span class="cta-mock">Mudar valor</span></div></div>
+        <div class="mc-row err"><div class="where">Erro<b>Limite noturno</b></div><div class="old"><small>Antes</small><q>Transação não autorizada (cód. 403)</q></div><div class="new"><small>Depois</small><p>Entre 20h e 6h, seu limite para Pix é R$ 1.000,00. Você pode agendar para amanhã ou ajustar seu limite.</p><span class="cta-mock">Agendar</span><span class="cta-mock sec">Ajustar limite</span><p class="why">Troca o código pelo motivo e oferece duas saídas.</p></div></div>
+        <div class="mc-row err"><div class="where">Erro<b>Chave</b></div><div class="old"><small>Antes</small><q>Você digitou uma chave inválida</q></div><div class="new"><small>Depois</small><p>Não encontramos essa chave. Confira se está correta ou peça outra chave para quem vai receber.</p><p class="why">Tira a culpa do usuário: a chave pode só não estar cadastrada.</p></div></div>
+        <div class="mc-row err"><div class="where">Erro<b>Conexão</b></div><div class="old"><small>Antes</small><q>Falha na comunicação com o servidor</q></div><div class="new"><small>Depois</small><p>A conexão falhou e o Pix não foi enviado. Seu dinheiro continua na conta.</p><span class="cta-mock">Tentar de novo</span><p class="why">Responde à dúvida principal: o dinheiro saiu ou não?</p></div></div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h4>Acessibilidade e leiturabilidade</h4>
+          <ul class="why-list">
+            <li>Cada botão faz sentido sozinho, também no leitor de tela.</li>
+            <li>Campos com rótulo fixo, e não só texto de exemplo que some ao digitar.</li>
+            <li>Erro indicado por texto e ícone, sem depender só da cor vermelha.</li>
+            <li>Valores e horários por extenso: “R$ 1.000,00” e “20h”, nunca “1k”.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Etapas</h4>
+          <ul class="checks">
+            <li class="done">Mapeamento dos problemas de linguagem do fluxo</li>
+            <li class="done">Guia de voz e tom e regras de escrita</li>
+            <li class="done">Reescrita das 5 telas e dos 4 erros</li>
+            <li>Protótipo das telas no Figma</li>
+            <li>Teste de compreensão com usuários e ajustes</li>
+          </ul>
+        </div>
+      </div>
+      <p class="why">O Banco Aurora, os nomes e os valores são fictícios.</p>
+    </article>
+  </div>
+</section>
+
 <section id="design">
   <div class="sec-head">
-    <span class="mark">05 · Design instrucional</span>
+    <span class="mark">06 · Design instrucional</span>
     <h2>Do conteúdo à experiência de aprendizagem</h2>
   </div>
   <div class="body">
@@ -674,19 +801,19 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
 
 <section id="sobre">
   <div class="sec-head">
-    <span class="mark">06 · Sobre</span>
+    <span class="mark">07 · Sobre</span>
     <h2>Dez anos entre a sala de aula e a revisão</h2>
   </div>
   <div class="body two">
     <div>
-      <img class="me" src="assets/leticia.jpg" width="640" height="640" alt="Retrato de Letícia Gazinhato, de cabelo curto castanho e camiseta branca, sorrindo levemente diante de uma parede clara.">
+      <img class="me" src="https://leticiagazinhato.github.io/assets/leticia.jpg" width="640" height="640" alt="Retrato de Letícia Gazinhato, de cabelo curto castanho e camiseta branca, sorrindo levemente diante de uma parede clara.">
       <p>Meu trabalho com o texto começou em 2016, em duas frentes ao mesmo tempo. Na revisão, comecei pelos artigos acadêmicos da minha irmã, que estudava Relações Internacionais, e revisei também o TCC dela, aprovado com êxito.</p>
       <p>Na educação, comecei como monitora de Língua Portuguesa e passei mais de oito anos na Escola Móbile, onde ensinei produção de texto. Nesse período, continuei a revisar trabalhos acadêmicos de áreas muito diferentes, de artigos de Direito a uma tese de doutorado em Matemática Pura.</p>
-      <p>Hoje levo esse olhar para tudo o que faço: ensino, revisão, materiais didáticos e textos para a web.</p>
+      <p>Hoje levo esse olhar para tudo o que faço: ensino, revisão, materiais didáticos, textos para a web e microtextos para produtos digitais.</p>
     </div>
     <div class="side">
       <figure class="pet">
-        <img src="assets/chiquinha.jpg" width="1000" height="841" alt="Chiquinha, gata rajada, dormindo com a cabeça apoiada sobre um dicionário Houaiss amarelo.">
+        <img src="https://leticiagazinhato.github.io/assets/chiquinha.jpg" width="1000" height="841" alt="Chiquinha, gata rajada, dormindo com a cabeça apoiada sobre um dicionário Houaiss amarelo.">
         <figcaption>Chiquinha, minha assistente, em consulta aprofundada ao Houaiss</figcaption>
       </figure>
     <ul class="list" aria-label="Formação e idiomas">
@@ -702,11 +829,11 @@ footer{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink);clip-path:inset
 
 <section id="contato" style="border-bottom:0">
   <div class="sec-head">
-    <span class="mark">07 · Contato</span>
+    <span class="mark">08 · Contato</span>
     <h2>Vamos trabalhar juntos</h2>
   </div>
   <div class="body">
-    <p style="max-width:58ch;margin:0 0 28px;font-size:21px">Estou em busca de oportunidades em editoras e empresas de educação, nas áreas de redação, revisão e preparação de textos, elaboração de materiais didáticos e avaliativos e design instrucional.</p>
+    <p style="max-width:58ch;margin:0 0 28px;font-size:21px">Estou em busca de oportunidades em editoras e empresas de educação, nas áreas de redação, revisão e preparação de textos, elaboração de materiais didáticos e avaliativos, design instrucional e UX Writing.</p>
     <div class="contact-lines">
       <div><span>E-mail</span><a href="mailto:leticia.gazinhato@gmail.com">leticia.gazinhato@gmail.com</a></div>
       <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/leticiagazinhato">linkedin.com/in/leticiagazinhato</a></div>
